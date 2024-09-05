@@ -27,12 +27,7 @@ export default function Navbar() {
   return (
     <div className="flex py-1 space-x-3 mx-auto max-w-6xl">
       <div className="flex-1 mx-auto">
-        {/* <img
-          src="/logo2.png"
-          alt="Logo"
-          onClick={() => router.push("/")}
-          className="w-8 ml-5 hover:cursor-pointer"
-        /> */}
+       
         <div className="w-20 shadow-xl rounded-lg">
           <p
             onClick={() => router.push("/")}

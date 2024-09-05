@@ -1,4 +1,4 @@
-import AllAds from "@/components/AllAds";
+import AllAds from "@/components/allAds";
 import { searchAdsByTitle } from "@/lib/fetchData";
 import React from "react";
 

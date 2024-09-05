@@ -1,4 +1,4 @@
-import AllAds from "@/components/AllAds";
+import AllAds from "@/components/allAds";
 import Header from "@/components/header";
 import Menu from "@/components/menu";
 import Slider from "@/components/slider";

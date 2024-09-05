@@ -1,4 +1,4 @@
-import AllAds from "@/components/AllAds";
+import AllAds from "@/components/allAds";
 import { fetchAdsByCategory } from "@/lib/fetchData";
 import ErrorIcon from "@mui/icons-material/Error";
 import { useEffect } from "react";
