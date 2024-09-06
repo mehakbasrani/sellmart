@@ -44,7 +44,7 @@ function Createadform() {
 
   const addImageToPost = (files: any) => {
     if (files.length < 2) {
-      setError("Please upload maximum of 10 files");
+      setError("Please upload minimum of 2 files");
       return;
     }
     let updatedGallary = [];
@@ -169,9 +169,9 @@ function Createadform() {
               {formData?.images.map((image, index) => (
                 <span key={index}>
                   <img
-                    src={URL.createObjectURL(image)}
+                    src={typeof image === 'string' ? image : URL.createObjectURL(image)} 
                     className="w-12 h-12"
-                    alt="AdImage"
+                    alt={`AdImage-${index}`}
                   />
                 </span>
               ))}
@@ -212,7 +212,6 @@ function Createadform() {
             label="Description"
             value={formData.description}
             type="text"
-            // autoComplete="current-password"
             sx={{ width: "350px", marginBottom: "15px" }}
             onChange={(e) =>
               setFormData({ ...formData, description: e.target.value })

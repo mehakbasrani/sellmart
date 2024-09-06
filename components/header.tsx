@@ -7,7 +7,7 @@ import { useState } from "react";
 
 function Header() {
   const router = useRouter();
-  const [search, setSearch] = useState<string>();
+  const [search, setSearch] = useState<string>("");
 
   return (
     <div className="flex max-w-6xl mx-auto">
