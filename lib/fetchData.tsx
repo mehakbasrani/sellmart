@@ -54,7 +54,12 @@ export const fetchAdsByCategory = async (category: string) => {
 
 //
 export const searchAdsByTitle = async (title: string) => {
-  const q = query(collection(db, "ads"), where("title", "<=", title));
+  // const q = query(collection(db, "ads"), where("title", "<=", title));
+   const q = query(
+    adsRef,
+    where("title", ">=", title),
+    where("title", "<=", title + "\uf8ff")
+  );
   const querySnapshot = await getDocs(q);
 
   const results = querySnapshot.docs.map((doc) => ({
